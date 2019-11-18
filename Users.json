@@ -1,0 +1,59 @@
+{
+  "users" : [ {
+    "userId" : "a1283aff-4336-4ef9-968d-bcc0bb64b91c",
+    "username" : "testing",
+    "email" : "",
+    "password" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scores" : [ {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    } ],
+    "totalScore" : "0",
+    "timePlayed" : "0"
+  }, {
+    "userId" : "2bba085b-5271-41ba-bcdb-71fb7c23e5b3",
+    "username" : "testing",
+    "email" : "",
+    "password" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scores" : [ {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    }, {
+      "score" : "0"
+    } ],
+    "totalScore" : "0",
+    "timePlayed" : "0"
+  } ]
+}

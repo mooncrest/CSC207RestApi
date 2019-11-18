@@ -1,0 +1,49 @@
+{
+  "leaderBoards" : [ {
+    "scores" : [ {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    } ],
+    "game" : "Tetris2"
+  }, {
+    "scores" : [ {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    }, {
+      "score" : "20"
+    } ],
+    "game" : "Tetris3"
+  } ]
+}
