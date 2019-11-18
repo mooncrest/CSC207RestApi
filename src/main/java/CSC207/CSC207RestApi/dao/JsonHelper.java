@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonHelper {
+    // prob should use some inheritance here
     public static void writeJson(String filename, String type, Object jsonObject) {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -20,6 +21,8 @@ public class JsonHelper {
                 mapper.writeValue(new File(filename), ((UserDataBase)jsonObject));
             } else if (type.equals("leader")) {
                 mapper.writeValue(new File(filename), ((LeaderBoardDataBase)jsonObject));
+            } else if (type.equals("tokens")) {
+                mapper.writeValue(new File(filename), ((TokenDataBase)jsonObject));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -33,6 +36,8 @@ public class JsonHelper {
                 return mapper.readValue(new File(filename), UserDataBase.class);
             } else if (type.equals("leader")) {
                 return mapper.readValue(new File(filename), LeaderBoardDataBase.class);
+            } else if (type.equals("tokens")) {
+                return mapper.readValue(new File(filename), TokenDataBase.class);
             }
         }
         catch (JsonParseException e) {

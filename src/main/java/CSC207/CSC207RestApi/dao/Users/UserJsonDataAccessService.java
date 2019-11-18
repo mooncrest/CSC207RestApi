@@ -2,6 +2,7 @@ package CSC207.CSC207RestApi.dao.Users;
 
 import CSC207.CSC207RestApi.dao.JsonHelper;
 import CSC207.CSC207RestApi.model.LeaderBoardDataBase;
+import CSC207.CSC207RestApi.model.LoginInfo;
 import CSC207.CSC207RestApi.model.User;
 import CSC207.CSC207RestApi.model.UserDataBase;
 import org.springframework.stereotype.Repository;
@@ -28,5 +29,18 @@ public class UserJsonDataAccessService implements UsersDao {
     @Override
     public List<User> selectAllPeople() {
         return ((UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType)).getUsers();
+    }
+
+    public String getUserInfo(LoginInfo loginInfo) {
+        String email = loginInfo.getEmail();
+        String password = loginInfo.getPassword();
+        // make DB an iterator
+        UserDataBase DB = (UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType);
+        for (User user : DB.getUsers()) {
+            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+                return user.getUsername();
+            }
+        }
+        return null;
     }
 }

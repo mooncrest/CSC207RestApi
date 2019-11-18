@@ -2,6 +2,8 @@ package CSC207.CSC207RestApi.api.Leaderboard;
 
 import CSC207.CSC207RestApi.model.LeaderBoard;
 import CSC207.CSC207RestApi.model.Score;
+import CSC207.CSC207RestApi.model.ScorePostToken;
+import CSC207.CSC207RestApi.model.Token;
 import CSC207.CSC207RestApi.service.Leaderboard.LeaderBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +21,10 @@ public class LeaderboardTester {
     }
 
     @PutMapping(path = "{game}")
-    public void addPerson(@PathVariable("game") String game, @RequestBody Score score) {
-        leaderBoardService.insertScore(score, game);
+    public void addScore(@PathVariable("game") String game, @RequestBody ScorePostToken token) {
+        Token userToken = token.getToken();
+        Score userScore = token.getScore();
+        leaderBoardService.insertScore(userToken, userScore, game);
     }
 
     @GetMapping(path = "{game}")

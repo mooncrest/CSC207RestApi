@@ -2,10 +2,10 @@ package CSC207.CSC207RestApi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Token {
+    @JsonProperty("token")
+    private String token;
 
-public class Score {
-    @JsonProperty("score")
-    private String score;
     @JsonProperty("username")
     private String username;
 
@@ -17,10 +17,11 @@ public class Score {
         this.username = username;
     }
 
-    public void setScore(String score) {
-        this.score = score;
+    public String getToken() {
+        return token;
     }
-    public String getScore() {
-        return score;
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

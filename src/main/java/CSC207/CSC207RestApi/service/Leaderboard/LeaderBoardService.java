@@ -1,8 +1,10 @@
 package CSC207.CSC207RestApi.service.Leaderboard;
 
 import CSC207.CSC207RestApi.dao.Leaderboard.LeaderBoardDao;
+import CSC207.CSC207RestApi.dao.Tokens.TokensDao;
 import CSC207.CSC207RestApi.model.LeaderBoard;
 import CSC207.CSC207RestApi.model.Score;
+import CSC207.CSC207RestApi.model.Token;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -13,13 +15,27 @@ import java.util.List;
 @Service
 public class LeaderBoardService {
     private final LeaderBoardDao leaderBoardDao;
+    private final TokensDao tokensDao;
 
     @Autowired
-    public LeaderBoardService(@Qualifier("jsonLeaderBoardDao") LeaderBoardDao leaderBoardDao) {
+    public LeaderBoardService(@Qualifier("jsonLeaderBoardDao") LeaderBoardDao leaderBoardDao,
+                              @Qualifier("tokenDao") TokensDao tokensDao) {
         this.leaderBoardDao = leaderBoardDao;
+        this.tokensDao = tokensDao;
     }
 
-    public int insertScore(Score score, String game) {
+    public int insertScore(Token token, Score score, String game) {
+        String tokenUser = tokensDao.getUsername(token);
+        String scoreUser = score.getUsername();
+
+        // need to post to user scores as well
+        
+        if (scoreUser == null || tokenUser == null) {
+            return -3;
+        } else if (!scoreUser.equals(tokenUser)) {
+            return -4;
+        }
+
         int position = topScore(score.getScore(), game);
         if (position < 0) {
             return position;

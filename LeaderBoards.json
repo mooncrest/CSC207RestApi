@@ -1,49 +1,33 @@
 {
   "leaderBoards" : [ {
     "scores" : [ {
-      "score" : "20"
+      "score" : "500",
+      "username" : "john"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
+      "score" : "0",
+      "username" : "null"
     } ],
-    "game" : "Tetris2"
-  }, {
-    "scores" : [ {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    }, {
-      "score" : "20"
-    } ],
-    "game" : "Tetris3"
+    "game" : "minecraft"
   } ]
 }
