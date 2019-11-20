@@ -3,6 +3,7 @@ package CSC207.CSC207RestApi.service.Leaderboard;
 import CSC207.CSC207RestApi.dao.Leaderboard.LeaderBoardDao;
 import CSC207.CSC207RestApi.dao.Tokens.TokensDao;
 import CSC207.CSC207RestApi.model.LeaderBoard;
+import CSC207.CSC207RestApi.model.LeaderBoardDataBase;
 import CSC207.CSC207RestApi.model.Score;
 import CSC207.CSC207RestApi.model.Token;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,7 +72,7 @@ public class LeaderBoardService {
         return leaderBoardDao.getScores(game);
     }
 
-    public List<LeaderBoard> getAllScores() {
+    public LeaderBoardDataBase getAllScores() {
         return leaderBoardDao.getLeaderBoards();
     }
 

@@ -55,10 +55,9 @@ public class LeaderBoardJsonDataAccessService implements LeaderBoardDao {
     }
 
     @Override
-    public List<LeaderBoard> getLeaderBoards() {
+    public LeaderBoardDataBase getLeaderBoards() {
         LeaderBoardDataBase DB = (LeaderBoardDataBase)  JsonHelper.ReadJson(fileName, jsonDBType);
-        List<LeaderBoard> leaderBoards = DB.getLeaderBoards();
-        return leaderBoards;
+        return DB;
     }
 
     @Override

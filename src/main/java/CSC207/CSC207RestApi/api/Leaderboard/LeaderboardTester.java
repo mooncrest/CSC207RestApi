@@ -1,9 +1,6 @@
 package CSC207.CSC207RestApi.api.Leaderboard;
 
-import CSC207.CSC207RestApi.model.LeaderBoard;
-import CSC207.CSC207RestApi.model.Score;
-import CSC207.CSC207RestApi.model.ScorePostToken;
-import CSC207.CSC207RestApi.model.Token;
+import CSC207.CSC207RestApi.model.*;
 import CSC207.CSC207RestApi.service.Leaderboard.LeaderBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +23,7 @@ public class LeaderboardTester {
     }
 
     @GetMapping
-    public List<LeaderBoard> getAllScores() {
+    public LeaderBoardDataBase getAllScores() {
         return leaderBoardService.getAllScores();
     }
 
