@@ -1,41 +1,140 @@
 {
   "users" : [ {
-    "userId" : "ba8711aa-b4cd-41f1-9dbe-03f60368436f",
-    "username" : "john",
-    "email" : "test@gmail.com",
-    "password" : "hellothere",
-    "scores" : [ {
-      "score" : "5",
-      "username" : "john"
+    "username" : "testing",
+    "email" : "testing",
+    "password" : "testing",
+    "userScores" : [ {
+      "scores" : [ {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      } ],
+      "game" : "TetrisGame"
     }, {
-      "score" : "5",
-      "username" : "john"
+      "scores" : [ {
+        "score" : "4000",
+        "username" : "testing"
+      }, {
+        "score" : "1211",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      } ],
+      "game" : "MazeGame"
     }, {
-      "score" : "5",
-      "username" : "john"
+      "scores" : [ {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      } ],
+      "game" : "RhythmGame"
     }, {
-      "score" : "5",
-      "username" : "john"
-    }, {
-      "score" : "5",
-      "username" : "john"
-    }, {
-      "score" : "5",
-      "username" : "john"
-    }, {
-      "score" : "5",
-      "username" : "john"
-    }, {
-      "score" : "5",
-      "username" : "john"
-    }, {
-      "score" : "5",
-      "username" : "john"
-    }, {
-      "score" : "5",
-      "username" : "john"
+      "scores" : [ {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      }, {
+        "score" : "0",
+        "username" : "testing"
+      } ],
+      "game" : "WrapperGame"
     } ],
-    "totalScore" : "1000",
-    "timePlayed" : "2000"
+    "totalScore" : "0",
+    "timePlayed" : "0",
+    "userID" : "ba1ba542-9718-486e-99a1-132bf24c7302"
   } ]
 }

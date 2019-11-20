@@ -12,13 +12,13 @@ public class User {
     private String email;
     @JsonProperty("password")
     private String password;
-    @JsonProperty("scores")
-    private List<Score> scores;
+    @JsonProperty("userScores")
+    private List<LeaderBoard> userScores;
     @JsonProperty("totalScore")
     private String totalPoints;
     @JsonProperty("timePlayed")
     private String timePlayed;
-
+    @JsonProperty("userID")
     private UUID userId;
 
     public UUID getUserId() {
@@ -69,11 +69,15 @@ public class User {
         return username;
     }
 
-    public void setScores(List<Score> scores) {
-        this.scores = scores;
+    public List<LeaderBoard> getUserScores() {
+        return userScores;
     }
 
-    public List<Score> getScores() {
-        return scores;
+    public void setUserScores(List<LeaderBoard> userScores) {
+        this.userScores = userScores;
+    }
+
+    public void addUserScores(LeaderBoard userScores) {
+        this.userScores.add(userScores);
     }
 }

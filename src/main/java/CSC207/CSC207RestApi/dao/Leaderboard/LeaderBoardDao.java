@@ -6,7 +6,7 @@ import CSC207.CSC207RestApi.model.Score;
 import java.util.List;
 
 public interface LeaderBoardDao {
-    int insertScore(List<Score> score, String game);
+    int setScores(List<Score> score, String game);
 
     LeaderBoard getLeaderBoard(String game);
 

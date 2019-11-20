@@ -20,13 +20,6 @@ public class LeaderboardTester {
         this.leaderBoardService = leaderBoardService;
     }
 
-    @PutMapping(path = "{game}")
-    public void addScore(@PathVariable("game") String game, @RequestBody ScorePostToken token) {
-        Token userToken = token.getToken();
-        Score userScore = token.getScore();
-        leaderBoardService.insertScore(userToken, userScore, game);
-    }
-
     @GetMapping(path = "{game}")
     public LeaderBoard getLeaderBoard(@PathVariable("game") String game) {
         return leaderBoardService.getLeaderBoard(game);

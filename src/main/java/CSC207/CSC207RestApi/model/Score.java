@@ -20,6 +20,7 @@ public class Score {
     public void setScore(String score) {
         this.score = score;
     }
+
     public String getScore() {
         return score;
     }

@@ -2,6 +2,7 @@ package CSC207.CSC207RestApi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LeaderBoard {

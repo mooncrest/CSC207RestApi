@@ -15,47 +15,40 @@ import java.util.List;
 @Service
 public class LeaderBoardService {
     private final LeaderBoardDao leaderBoardDao;
-    private final TokensDao tokensDao;
 
     @Autowired
-    public LeaderBoardService(@Qualifier("jsonLeaderBoardDao") LeaderBoardDao leaderBoardDao,
-                              @Qualifier("tokenDao") TokensDao tokensDao) {
+    public LeaderBoardService(@Qualifier("jsonLeaderBoardDao") LeaderBoardDao leaderBoardDao) {
         this.leaderBoardDao = leaderBoardDao;
-        this.tokensDao = tokensDao;
     }
 
-    public int insertScore(Token token, Score score, String game) {
-        String tokenUser = tokensDao.getUsername(token);
-        String scoreUser = score.getUsername();
-
-        // need to post to user scores as well
-        
-        if (scoreUser == null || tokenUser == null) {
-            return -3;
-        } else if (!scoreUser.equals(tokenUser)) {
-            return -4;
-        }
+    // -1 means not a top score -2 means game does not exist, 1 mean everything ran successfully
+    public int insertScore(Score score, String game) {
 
         int position = topScore(score.getScore(), game);
+
         if (position < 0) {
             return position;
         }
+
         List<Score> scoresToInsert = new ArrayList<>();
 
-        List<Score> oldLeaderboard = getScores(game);
+        List<Score> oldLeaderBoard = getScores(game);
 
         for (int i = 0; i < 9; i++) {
             if (i == position) {
                 scoresToInsert.add(score);
+            } else if (i > position) {
+                scoresToInsert.add(oldLeaderBoard.get(i - 1));
             }
             else {
-                scoresToInsert.add(oldLeaderboard.get(i));
+                scoresToInsert.add(oldLeaderBoard.get(i));
             }
         }
 
-        return leaderBoardDao.insertScore(scoresToInsert, game);
+        return leaderBoardDao.setScores(scoresToInsert, game);
     }
 
+    // -1 means is not a top score -2 means game leaderBoard does not exist
     private int topScore(String score, String game) {
         int placement = -1;
         List<Score> scores = getScores(game);

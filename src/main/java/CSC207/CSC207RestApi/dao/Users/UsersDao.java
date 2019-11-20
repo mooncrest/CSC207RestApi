@@ -19,4 +19,8 @@ public interface UsersDao {
     List<User> selectAllPeople();
 
     public String getUserInfo(LoginInfo loginInfo);
+
+    public User getUserInfo(String username);
+
+    public int updateUser(User updatedUser);
 }

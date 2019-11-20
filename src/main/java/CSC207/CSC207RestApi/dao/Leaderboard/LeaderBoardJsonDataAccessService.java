@@ -14,14 +14,16 @@ public class LeaderBoardJsonDataAccessService implements LeaderBoardDao {
     private final String fileName = "LeaderBoards.json";
     private final String jsonDBType = "leader";
 
+    // -2 means leaderBoard does not exists 1 mean successfully inserted score
     @Override
-    public int insertScore(List<Score> score, String game) {
+    public int setScores(List<Score> score, String game) {
         LeaderBoardDataBase DB = (LeaderBoardDataBase)  JsonHelper.ReadJson(fileName, jsonDBType);
         LeaderBoard leaderBoard = getLeaderBoardHelper(game, DB);
 
         if (leaderBoard == null) {
-            return 0;
+            return -2;
         }
+
         leaderBoard.setScores(score);
         JsonHelper.writeJson(fileName, jsonDBType, DB);
         return 1;

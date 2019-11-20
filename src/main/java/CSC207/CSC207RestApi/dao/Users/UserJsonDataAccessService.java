@@ -31,6 +31,7 @@ public class UserJsonDataAccessService implements UsersDao {
         return ((UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType)).getUsers();
     }
 
+    @Override
     public String getUserInfo(LoginInfo loginInfo) {
         String email = loginInfo.getEmail();
         String password = loginInfo.getPassword();
@@ -42,5 +43,31 @@ public class UserJsonDataAccessService implements UsersDao {
             }
         }
         return null;
+    }
+
+    @Override
+    public User getUserInfo(String username) {
+        UserDataBase DB = (UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType);
+        for (User user : DB.getUsers()) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+    // 1 means successfully added -3 means user not found
+    @Override
+    public int updateUser(User updatedUser) {
+        UserDataBase DB = (UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType);
+        for (User user : DB.getUsers()) {
+            if (user.getUsername().equals(updatedUser.getUsername())) {
+                List<User> users = DB.getUsers();
+                users.remove(user);
+                users.add(updatedUser);
+                JsonHelper.writeJson(fileName, jsonDBType, DB);
+                return 1;
+            }
+        }
+        return -3;
     }
 }
