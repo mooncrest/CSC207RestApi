@@ -1,9 +1,9 @@
 package CSC207.CSC207RestApi.service.Tokens;
 
 import CSC207.CSC207RestApi.dao.Tokens.TokensDao;
-import CSC207.CSC207RestApi.model.LoginInfo;
 import CSC207.CSC207RestApi.model.Score;
 import CSC207.CSC207RestApi.model.Token;
+import CSC207.CSC207RestApi.model.User;
 import CSC207.CSC207RestApi.service.Leaderboard.LeaderBoardService;
 import CSC207.CSC207RestApi.service.Users.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,8 +55,8 @@ public class TokensService {
         return 1;
     }
 
-    public Token login(LoginInfo loginInfo) {
-        Token token = usersService.login(loginInfo);
+    public Token login(User user) {
+        Token token = usersService.login(user);
         if (token == null) {
             return null;
         }

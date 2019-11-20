@@ -28,8 +28,8 @@ public class UsersService {
         return userDao.selectAllPeople();
     }
 
-    public Token login(LoginInfo loginInfo) {
-        String username = userDao.getUserInfo(loginInfo);
+    public Token login(User user) {
+        String username = userDao.getUserInfo(user);
         if (username == null) {
             return null;
         }

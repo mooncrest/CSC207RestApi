@@ -1,6 +1,5 @@
 package CSC207.CSC207RestApi.dao.Users;
 
-import CSC207.CSC207RestApi.model.LoginInfo;
 import CSC207.CSC207RestApi.model.User;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public interface UsersDao {
 
     List<User> selectAllPeople();
 
-    public String getUserInfo(LoginInfo loginInfo);
+    public String getUserInfo(User user);
 
     public User getUserInfo(String username);
 
