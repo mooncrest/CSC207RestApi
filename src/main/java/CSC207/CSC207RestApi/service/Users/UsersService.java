@@ -21,11 +21,11 @@ public class UsersService {
     }
 
     public int addPerson(User user) {
-        return userDao.insertPerson(user);
+        return userDao.insertUser(user);
     }
 
     public List<User> getAllPeople() {
-        return userDao.selectAllPeople();
+        return userDao.selectAllUsers();
     }
 
     public Token login(User user) {
@@ -117,7 +117,7 @@ public class UsersService {
         userScores.add(generateEmptyLeaderBoard("RhythmGame", username));
         userScores.add(generateEmptyLeaderBoard("WrapperGame", username));
         user.setUserScores(userScores);
-        userDao.insertPerson(user);
+        userDao.insertUser(user);
         return 1;
     }
     private LeaderBoard generateEmptyLeaderBoard(String game, String username) {

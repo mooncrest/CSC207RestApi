@@ -14,7 +14,7 @@ public class UserJsonDataAccessService implements UsersDao {
     private final String jsonDBType = "user";
 
     @Override
-    public int insertPerson(UUID id, User user) {
+    public int insertUser(UUID id, User user) {
         UserDataBase DB = (UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType);
         List<User> users =  DB.getUsers();
         user.setUserId(id);
@@ -24,7 +24,7 @@ public class UserJsonDataAccessService implements UsersDao {
     }
 
     @Override
-    public List<User> selectAllPeople() {
+    public List<User> selectAllUsers() {
         return ((UserDataBase)JsonHelper.ReadJson(fileName, jsonDBType)).getUsers();
     }
 
