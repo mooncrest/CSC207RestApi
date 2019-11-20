@@ -1,6 +1,5 @@
 package CSC207.CSC207RestApi.service.Users;
 
-import CSC207.CSC207RestApi.dao.Tokens.TokensDao;
 import CSC207.CSC207RestApi.dao.Users.UsersDao;
 import CSC207.CSC207RestApi.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class UsersService {
     }
 
     public Token login(User user) {
-        String username = userDao.getUserInfo(user);
+        String username = userDao.getLoginUser(user);
         if (username == null) {
             return null;
         }

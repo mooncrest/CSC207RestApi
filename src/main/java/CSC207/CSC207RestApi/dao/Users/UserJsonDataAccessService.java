@@ -29,7 +29,7 @@ public class UserJsonDataAccessService implements UsersDao {
     }
 
     @Override
-    public String getUserInfo(User loginUser) {
+    public String getLoginUser(User loginUser) {
         String email = loginUser.getEmail();
         String password = loginUser.getPassword();
         // make DB an iterator

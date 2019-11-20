@@ -17,7 +17,7 @@ public interface UsersDao {
 
     public List<User> selectAllUsers();
 
-    public String getUserInfo(User user);
+    public String getLoginUser(User user);
 
     public User getUserInfo(String username);
 
