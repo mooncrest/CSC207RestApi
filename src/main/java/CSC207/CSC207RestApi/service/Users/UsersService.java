@@ -28,13 +28,13 @@ public class UsersService {
     }
 
     public Token login(User user) {
-        String username = userDao.getLoginUser(user);
-        if (username == null) {
+        User userDB = userDao.getUserInfo(user.getUsername());
+        if (!userDB.getUsername().equals(user.getUsername()) || !userDB.getPassword().equals(user.getPassword())) {
             return null;
         }
         Token token = new Token();
         token.setToken(UUID.randomUUID().toString());
-        token.setUsername(username);
+        token.setUsername(userDB.getUsername());
         return token;
     }
 

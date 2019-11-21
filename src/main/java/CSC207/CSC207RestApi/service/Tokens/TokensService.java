@@ -63,4 +63,8 @@ public class TokensService {
         tokensDao.addToken(token);
         return token;
     }
+
+    public void deleteTokens() {
+        tokensDao.deleteTokens();
+    }
 }

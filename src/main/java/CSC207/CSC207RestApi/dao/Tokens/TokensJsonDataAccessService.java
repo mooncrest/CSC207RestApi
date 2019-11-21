@@ -26,4 +26,9 @@ public class TokensJsonDataAccessService implements TokensDao {
         }
         return null;
     }
+
+    @Override
+    public void deleteTokens() {
+        jsonHelper.writeJson(new TokenDataBase());
+    }
 }

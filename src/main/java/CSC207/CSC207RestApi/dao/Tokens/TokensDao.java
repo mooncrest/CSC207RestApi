@@ -6,4 +6,6 @@ public interface TokensDao {
     public void addToken(Token token);
 
     public String getUsername(Token token);
+
+    public void deleteTokens();
 }
