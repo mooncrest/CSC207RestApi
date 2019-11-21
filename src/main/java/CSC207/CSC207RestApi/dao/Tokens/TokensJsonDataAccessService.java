@@ -7,20 +7,18 @@ import org.springframework.stereotype.Repository;
 
 @Repository("tokenDao")
 public class TokensJsonDataAccessService implements TokensDao {
-    private final String fileName = "Tokens.json";
-    private final String jsonDBType = "tokens";
-
+    private final JsonHelper<TokenDataBase> jsonHelper = new JsonHelper<>(TokenDataBase.class, "Tokens.json");
     @Override
     public void addToken(Token token) {
-        TokenDataBase DB = (TokenDataBase) JsonHelper.ReadJson(fileName, jsonDBType);
+        TokenDataBase DB = jsonHelper.ReadJson();
         DB.addToken(token);
-        JsonHelper.writeJson(fileName, jsonDBType, DB);
+        jsonHelper.writeJson(DB);
     }
 
     @Override
     public String getUsername(Token userToken) {
         String access = userToken.getToken();
-        TokenDataBase DB = (TokenDataBase) JsonHelper.ReadJson(fileName, jsonDBType);
+        TokenDataBase DB = jsonHelper.ReadJson();
         for (Token token: DB.getTokens()) {
             if (token.getToken().equals(access) && token.getUsername().equals(userToken.getUsername())) {
                 return token.getUsername();

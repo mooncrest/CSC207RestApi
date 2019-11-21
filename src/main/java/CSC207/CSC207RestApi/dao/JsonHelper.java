@@ -1,6 +1,5 @@
 package CSC207.CSC207RestApi.dao;
 
-import CSC207.CSC207RestApi.model.*;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,37 +7,30 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class JsonHelper {
-    // prob should use some inheritance here
-    public static void writeJson(String filename, String type, Object jsonObject) {
-        ObjectMapper mapper = new ObjectMapper();
+public class JsonHelper <T>{
+    private File file;
+    private Class<T> type;
+    private ObjectMapper mapper = new ObjectMapper();
+
+    public JsonHelper(Class<T> type, String fileName) {
+        this.type = type;
+        this.file = new File(fileName);
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+    }
+
+    public void writeJson(T DB) {
         try {
-            mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            if (type.equals("user")) {
-                mapper.writeValue(new File(filename), ((UserDataBase)jsonObject));
-            } else if (type.equals("leader")) {
-                mapper.writeValue(new File(filename), ((LeaderBoardDataBase)jsonObject));
-            } else if (type.equals("tokens")) {
-                mapper.writeValue(new File(filename), ((TokenDataBase)jsonObject));
-            }
+            mapper.writeValue(file, DB);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static Object ReadJson(String filename, String type) {
-        ObjectMapper mapper = new ObjectMapper();
+
+    public T ReadJson() {
         try {
-            if (type.equals("user")) {
-                return mapper.readValue(new File(filename), UserDataBase.class);
-            } else if (type.equals("leader")) {
-                return mapper.readValue(new File(filename), LeaderBoardDataBase.class);
-            } else if (type.equals("tokens")) {
-                return mapper.readValue(new File(filename), TokenDataBase.class);
-            }
+            return mapper.readValue(file, type);
         }
         catch (JsonParseException e) {
             e.printStackTrace();

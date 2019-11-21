@@ -67,6 +67,9 @@
     "game" : "TetrisGame"
   }, {
     "scores" : [ {
+      "score" : "9999",
+      "username" : "testing"
+    }, {
       "score" : "4000",
       "username" : "testing"
     }, {
@@ -75,9 +78,6 @@
     }, {
       "score" : "1211",
       "username" : "testing"
-    }, {
-      "score" : "0",
-      "username" : "none"
     }, {
       "score" : "0",
       "username" : "none"

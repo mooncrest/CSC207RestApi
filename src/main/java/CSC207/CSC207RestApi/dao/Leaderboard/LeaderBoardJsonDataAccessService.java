@@ -11,13 +11,11 @@ import java.util.List;
 
 @Repository("jsonLeaderBoardDao")
 public class LeaderBoardJsonDataAccessService implements LeaderBoardDao {
-    private final String fileName = "LeaderBoards.json";
-    private final String jsonDBType = "leader";
-
+    private final JsonHelper<LeaderBoardDataBase> jsonHelper = new JsonHelper<>(LeaderBoardDataBase.class, "LeaderBoards.json");
     // -2 means leaderBoard does not exists 1 mean successfully inserted score
     @Override
     public int setScores(List<Score> score, String game) {
-        LeaderBoardDataBase DB = (LeaderBoardDataBase)  JsonHelper.ReadJson(fileName, jsonDBType);
+        LeaderBoardDataBase DB = jsonHelper.ReadJson();
         LeaderBoard leaderBoard = getLeaderBoardHelper(game, DB);
 
         if (leaderBoard == null) {
@@ -25,13 +23,13 @@ public class LeaderBoardJsonDataAccessService implements LeaderBoardDao {
         }
 
         leaderBoard.setScores(score);
-        JsonHelper.writeJson(fileName, jsonDBType, DB);
+        jsonHelper.writeJson(DB);
         return 1;
     }
 
     @Override
     public LeaderBoard getLeaderBoard(String game) {
-        LeaderBoardDataBase DB = (LeaderBoardDataBase)  JsonHelper.ReadJson(fileName, jsonDBType);
+        LeaderBoardDataBase DB = jsonHelper.ReadJson();
         return getLeaderBoardHelper(game, DB);
     }
 
@@ -56,14 +54,14 @@ public class LeaderBoardJsonDataAccessService implements LeaderBoardDao {
 
     @Override
     public LeaderBoardDataBase getLeaderBoards() {
-        LeaderBoardDataBase DB = (LeaderBoardDataBase)  JsonHelper.ReadJson(fileName, jsonDBType);
+        LeaderBoardDataBase DB = jsonHelper.ReadJson();
         return DB;
     }
 
     @Override
     public void addLeaderBoard(LeaderBoard leaderBoard) {
-        LeaderBoardDataBase DB = (LeaderBoardDataBase)  JsonHelper.ReadJson(fileName, jsonDBType);
+        LeaderBoardDataBase DB = jsonHelper.ReadJson();
         DB.addLeaderBoard(leaderBoard);
-        JsonHelper.writeJson(fileName, jsonDBType, DB);
+        jsonHelper.writeJson(DB);
     }
 }
