@@ -27,14 +27,18 @@ public class UsersService {
         return userDao.selectAllUsers();
     }
 
+    public User getUser(String username) {
+        return userDao.getUserInfo(username);
+    }
+
     public Token login(User user) {
-        User userDB = userDao.getUserInfo(user.getUsername());
-        if (!userDB.getUsername().equals(user.getUsername()) || !userDB.getPassword().equals(user.getPassword())) {
+        String username = userDao.getLoginUser(user);
+        if (username == null) {
             return null;
         }
         Token token = new Token();
         token.setToken(UUID.randomUUID().toString());
-        token.setUsername(userDB.getUsername());
+        token.setUsername(username);
         return token;
     }
 

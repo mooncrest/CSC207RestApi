@@ -67,4 +67,13 @@ public class TokensService {
     public void deleteTokens() {
         tokensDao.deleteTokens();
     }
+
+    public User getUser(Token token) {
+        String tokenUser = tokensDao.getUsername(token);
+        if (tokenUser == null) {
+            return null;
+        }
+
+        return usersService.getUser(tokenUser);
+    }
 }

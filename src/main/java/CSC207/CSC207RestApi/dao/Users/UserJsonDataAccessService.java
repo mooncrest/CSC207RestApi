@@ -39,7 +39,7 @@ public class UserJsonDataAccessService implements UsersDao {
         }
         return null;
     }
-
+    // get strategy design here
     @Override
     public User getUserInfo(String username) {
         UserDataBase DB = jsonHelper.ReadJson();
@@ -50,6 +50,7 @@ public class UserJsonDataAccessService implements UsersDao {
         }
         return null;
     }
+
     // 1 means successfully added -3 means user not found
     @Override
     public int updateUser(User updatedUser) {
