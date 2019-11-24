@@ -5,7 +5,7 @@
     "password" : "testing",
     "userScores" : [ {
       "scores" : [ {
-        "score" : "4000",
+        "score" : "0",
         "username" : "testing"
       }, {
         "score" : "0",
@@ -38,13 +38,13 @@
         "score" : "9999",
         "username" : "testing"
       }, {
-        "score" : "4000",
+        "score" : "0",
         "username" : "testing"
       }, {
-        "score" : "4000",
+        "score" : "0",
         "username" : "testing"
       }, {
-        "score" : "1211",
+        "score" : "0",
         "username" : "testing"
       }, {
         "score" : "0",
@@ -130,7 +130,8 @@
       } ],
       "game" : "WrapperGame"
     } ],
-    "totalScore" : "0",
+    "totalScore" : "9999",
+    "timePlayed" : "0",
     "userID" : "ba1ba542-9718-486e-99a1-132bf24c7302"
   } ]
 }

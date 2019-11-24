@@ -47,7 +47,9 @@ public class UsersService {
     public int insertScore(Score score, String game) {
         // user has to exist since token verified this previously
         User user = userDao.getUserInfo(score.getUsername());
-
+        int totalScore = Integer.valueOf(user.getTotalPoints());
+        int addOnScore = Integer.valueOf(score.getScore());
+        user.setTotalPoints(String.valueOf(totalScore + addOnScore));
         LeaderBoard leaderBoard = getUserScoreLeaderBoard(user, game);
 
         if (leaderBoard == null) {
@@ -112,7 +114,6 @@ public class UsersService {
         // want a builder
         String username = user.getUsername();
         user.setTimePlayed("0");
-        user.setTotalPoints("0");
         List<LeaderBoard> userScores = new ArrayList<>();
         LeaderBoard leaderBoard = new LeaderBoard();
         userScores.add(generateEmptyLeaderBoard("TetrisGame", username));
