@@ -33,6 +33,7 @@ public class UsersService {
 
     public Token login(User user) {
         String username = userDao.getLoginUser(user);
+        System.out.println(username);
         if (username == null) {
             return null;
         }
@@ -114,6 +115,7 @@ public class UsersService {
         // want a builder
         String username = user.getUsername();
         user.setTimePlayed("0");
+        user.setTotalPoints("0");
         List<LeaderBoard> userScores = new ArrayList<>();
         LeaderBoard leaderBoard = new LeaderBoard();
         userScores.add(generateEmptyLeaderBoard("TetrisGame", username));

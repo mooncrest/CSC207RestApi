@@ -29,11 +29,12 @@ public class UserJsonDataAccessService implements UsersDao {
 
     @Override
     public String getLoginUser(User loginUser) {
-        String email = loginUser.getEmail();
+        String username = loginUser.getUsername();
+        System.out.println(username);
         String password = loginUser.getPassword();
         UserDataBase DB = jsonHelper.ReadJson();
         for (User user : DB.getUsers()) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 return user.getUsername();
             }
         }
