@@ -30,7 +30,6 @@ public class UserJsonDataAccessService implements UsersDao {
     @Override
     public String getLoginUser(User loginUser) {
         String username = loginUser.getUsername();
-        System.out.println(username);
         String password = loginUser.getPassword();
         UserDataBase DB = jsonHelper.ReadJson();
         for (User user : DB.getUsers()) {

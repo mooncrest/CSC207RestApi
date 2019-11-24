@@ -33,7 +33,6 @@ public class UsersService {
 
     public Token login(User user) {
         String username = userDao.getLoginUser(user);
-        System.out.println(username);
         if (username == null) {
             return null;
         }
