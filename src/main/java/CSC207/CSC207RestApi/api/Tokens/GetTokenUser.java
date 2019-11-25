@@ -24,7 +24,7 @@ public class GetTokenUser {
     }
 
     @PostMapping
-    public ResponseEntity<User> login(@RequestBody Token token) {
+    public ResponseEntity<User> getUser(@RequestBody Token token) {
         User user = tokensService.getUser(token);
         return new ResponseEntity<User>(user, HttpStatus.OK);
     }
