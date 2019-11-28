@@ -1,6 +1,6 @@
 {
   "users" : [ {
-    "username" : "",
+    "username" : "admin",
     "email" : "",
     "password" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "userScores" : [ {
@@ -132,6 +132,7 @@
     } ],
     "totalScore" : "9999",
     "timePlayed" : "0",
+    "currentStage": "3",
     "userID" : "ba1ba542-9718-486e-99a1-132bf24c7302"
-  } ]
+  }]
 }

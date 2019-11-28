@@ -122,6 +122,7 @@ public class UsersService {
         userScores.add(generateEmptyLeaderBoard("RhythmGame", username));
         userScores.add(generateEmptyLeaderBoard("WrapperGame", username));
         user.setUserScores(userScores);
+        user.setCurrentStage("0");
         userDao.insertUser(user);
         return 1;
     }

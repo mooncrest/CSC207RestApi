@@ -20,6 +20,16 @@ public class User {
     private String timePlayed;
     @JsonProperty("userID")
     private UUID userId;
+    @JsonProperty("currentStage")
+    private String currentStage;
+
+    public String getCurrentStage() {
+        return currentStage;
+    }
+
+    public void setCurrentStage(String currentStage) {
+        this.currentStage = currentStage;
+    }
 
     public UUID getUserId() {
         return userId;
