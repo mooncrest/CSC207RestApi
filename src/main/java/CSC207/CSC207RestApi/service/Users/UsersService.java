@@ -143,7 +143,7 @@ public class UsersService {
     public void updateStage(String username, String stage) {
         User user = getUser(username);
         int stageValue = Integer.parseInt(user.getCurrentStage());
-        if (Integer.parseInt(stage) > stageValue && stageValue < 3) {
+        if (Integer.parseInt(stage) > stageValue && stageValue < 5) {
             user.setCurrentStage(String.valueOf(stageValue + 1));
         }
         userDao.updateUser(user);

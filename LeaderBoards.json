@@ -13,6 +13,9 @@
       "score" : "1100",
       "username" : "admin"
     }, {
+      "score" : "1100",
+      "username" : "testing"
+    }, {
       "score" : "920",
       "username" : "admin"
     }, {
@@ -27,9 +30,6 @@
     }, {
       "score" : "440",
       "username" : "admin"
-    }, {
-      "score" : "0",
-      "username" : "none"
     } ],
     "game" : "WrapperGame"
   }, {
