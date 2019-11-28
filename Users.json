@@ -1,138 +1,144 @@
 {
   "users" : [ {
     "username" : "admin",
-    "email" : "",
+    "email" : "testing@gmail.com",
     "password" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "userScores" : [ {
       "scores" : [ {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
+      }, {
+        "score" : "0",
+        "username" : "admin"
       } ],
       "game" : "TetrisGame"
     }, {
       "scores" : [ {
-        "score" : "9999",
-        "username" : "testing"
+        "score" : "0",
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
+      }, {
+        "score" : "0",
+        "username" : "admin"
       } ],
       "game" : "MazeGame"
     }, {
       "scores" : [ {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       } ],
       "game" : "RhythmGame"
     }, {
       "scores" : [ {
-        "score" : "0",
-        "username" : "testing"
+        "score" : "1220",
+        "username" : "admin"
+      }, {
+        "score" : "1220",
+        "username" : "admin"
+      }, {
+        "score" : "1100",
+        "username" : "admin"
+      }, {
+        "score" : "920",
+        "username" : "admin"
+      }, {
+        "score" : "740",
+        "username" : "admin"
+      }, {
+        "score" : "620",
+        "username" : "admin"
+      }, {
+        "score" : "440",
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       }, {
         "score" : "0",
-        "username" : "testing"
-      }, {
-        "score" : "0",
-        "username" : "testing"
-      }, {
-        "score" : "0",
-        "username" : "testing"
-      }, {
-        "score" : "0",
-        "username" : "testing"
-      }, {
-        "score" : "0",
-        "username" : "testing"
-      }, {
-        "score" : "0",
-        "username" : "testing"
-      }, {
-        "score" : "0",
-        "username" : "testing"
+        "username" : "admin"
       } ],
       "game" : "WrapperGame"
     } ],
-    "totalScore" : "9999",
+    "totalScore" : "6260",
     "timePlayed" : "0",
-    "currentStage": "3",
-    "userID" : "ba1ba542-9718-486e-99a1-132bf24c7302"
-  }]
+    "userID" : "36d21756-18b9-4b1a-8018-2d22cf1e7aac",
+    "currentStage" : "3"
+  } ]
 }

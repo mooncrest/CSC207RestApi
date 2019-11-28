@@ -66,7 +66,7 @@ public class UsersService {
 
         List<Score> oldLeaderBoard = leaderBoard.getScores();
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             if (i == placement) {
                 scoresToInsert.add(score);
             } else if (i > placement) {
@@ -138,5 +138,14 @@ public class UsersService {
         }
         leaderBoard.setScores(scores);
         return leaderBoard;
+    }
+
+    public void updateStage(String username, String stage) {
+        User user = getUser(username);
+        int stageValue = Integer.parseInt(user.getCurrentStage());
+        if (Integer.parseInt(stage) > stageValue && stageValue < 3) {
+            user.setCurrentStage(String.valueOf(stageValue + 1));
+        }
+        userDao.updateUser(user);
     }
 }

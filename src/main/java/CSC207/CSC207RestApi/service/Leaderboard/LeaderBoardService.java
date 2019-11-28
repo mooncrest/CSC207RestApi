@@ -35,7 +35,7 @@ public class LeaderBoardService {
 
         List<Score> oldLeaderBoard = getScores(game);
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 10; i++) {
             if (i == position) {
                 scoresToInsert.add(score);
             } else if (i > position) {

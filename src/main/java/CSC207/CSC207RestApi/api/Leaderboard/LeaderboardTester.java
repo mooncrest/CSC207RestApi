@@ -17,7 +17,7 @@ public class LeaderboardTester {
         this.leaderBoardService = leaderBoardService;
     }
 
-    @GetMapping(path = "{game}")
+    @PostMapping(path = "{game}")
     public LeaderBoard getLeaderBoard(@PathVariable("game") String game) {
         return leaderBoardService.getLeaderBoard(game);
     }

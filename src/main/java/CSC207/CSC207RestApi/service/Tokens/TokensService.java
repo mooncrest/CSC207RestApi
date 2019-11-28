@@ -76,4 +76,13 @@ public class TokensService {
 
         return usersService.getUser(tokenUser);
     }
+
+    public void updateStage(Token token, String stage) {
+        String tokenUser = tokensDao.getUsername(token);
+        if (tokenUser == null) {
+            return;
+        }
+        System.out.println(tokenUser);
+        usersService.updateStage(tokenUser, stage);
+    }
 }

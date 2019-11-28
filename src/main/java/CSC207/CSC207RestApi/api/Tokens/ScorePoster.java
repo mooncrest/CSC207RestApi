@@ -6,6 +6,8 @@ import CSC207.CSC207RestApi.service.Tokens.TokensService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -22,15 +24,17 @@ public class ScorePoster {
     }
 
     @PutMapping(path = "{game}")
-    public void addScore(@PathVariable("game") String game, @RequestBody ObjectNode json) {
+    public ResponseEntity<String> addScore(@PathVariable("game") String game, @RequestBody ObjectNode json) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             Token token = mapper.readValue(json.get("token").toString(), Token.class);
             Score score = mapper.readValue(json.get("score").toString(), Score.class);
             tokensService.insertScore(token, score, game);
+            return new ResponseEntity<>("{Status: posted}", HttpStatus.OK);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }
 
