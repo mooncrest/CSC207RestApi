@@ -17,8 +17,8 @@ public class TimePlayedController {
         this.tokensService = tokensService;
     }
 
-    @PutMapping(path = "{timePlayed}")
-    public ResponseEntity<String> login(@PathVariable("timePlayed") String timePlayed, @RequestBody Token token) {
+    @PutMapping(path = "{duration}")
+    public ResponseEntity<String> login(@PathVariable("duration") String timePlayed, @RequestBody Token token) {
         tokensService.updateTimePlayed(token, timePlayed);
         return new ResponseEntity<>("{Status: updated}", HttpStatus.OK);
     }

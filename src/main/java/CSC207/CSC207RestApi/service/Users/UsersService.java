@@ -153,7 +153,9 @@ public class UsersService {
 
     public void updateTimePlayed(String username, String newTimePlayed) {
         User user = getUser(username);
-        int totalTimePlayed = Integer.parseInt(user.getTimePlayed()) + Integer.parseInt(newTimePlayed);
+        System.out.println(newTimePlayed);
+        long totalTimePlayed = Integer.parseInt(user.getTimePlayed()) + Integer.parseInt(newTimePlayed);
+        System.out.println(totalTimePlayed);
         user.setTimePlayed(String.valueOf(totalTimePlayed));
         userDao.updateUser(user);
     }
