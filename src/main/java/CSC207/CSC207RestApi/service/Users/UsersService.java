@@ -47,11 +47,13 @@ public class UsersService {
     public int insertScore(Score score, String game) {
         // user has to exist since token verified this previously
         User user = userDao.getUserInfo(score.getUsername());
-        int totalScore = Integer.valueOf(user.getTotalPoints());
-        int addOnScore = Integer.valueOf(score.getScore());
-        user.setTotalPoints(String.valueOf(totalScore + addOnScore));
-        LeaderBoard leaderBoard = getUserScoreLeaderBoard(user, game);
-
+        LeaderBoard leaderBoard = null;
+        if (user != null) {
+            int totalScore = Integer.valueOf(user.getTotalPoints());
+            int addOnScore = Integer.valueOf(score.getScore());
+            user.setTotalPoints(String.valueOf(totalScore + addOnScore));
+            leaderBoard = getUserScoreLeaderBoard(user, game);
+        }
         if (leaderBoard == null) {
             return -2;
         }
@@ -146,6 +148,13 @@ public class UsersService {
         if (Integer.parseInt(stage) > stageValue && stageValue < 5) {
             user.setCurrentStage(String.valueOf(stageValue + 1));
         }
+        userDao.updateUser(user);
+    }
+
+    public void updateTimePlayed(String username, String newTimePlayed) {
+        User user = getUser(username);
+        int totalTimePlayed = Integer.parseInt(user.getTimePlayed()) + Integer.parseInt(newTimePlayed);
+        user.setTimePlayed(String.valueOf(totalTimePlayed));
         userDao.updateUser(user);
     }
 }

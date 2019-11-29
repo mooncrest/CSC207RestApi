@@ -82,7 +82,14 @@ public class TokensService {
         if (tokenUser == null) {
             return;
         }
-        System.out.println(tokenUser);
         usersService.updateStage(tokenUser, stage);
+    }
+
+    public void updateTimePlayed(Token token, String timePlayed) {
+        String tokenUser = tokensDao.getUsername(token);
+        if (tokenUser == null) {
+            return;
+        }
+        usersService.updateTimePlayed(tokenUser, timePlayed);
     }
 }

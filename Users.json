@@ -104,6 +104,27 @@
       "game" : "RhythmGame"
     }, {
       "scores" : [ {
+        "score" : "3280",
+        "username" : "admin"
+      }, {
+        "score" : "3280",
+        "username" : "admin"
+      }, {
+        "score" : "2920",
+        "username" : "admin"
+      }, {
+        "score" : "2260",
+        "username" : "admin"
+      }, {
+        "score" : "2260",
+        "username" : "admin"
+      }, {
+        "score" : "2260",
+        "username" : "admin"
+      }, {
+        "score" : "2020",
+        "username" : "admin"
+      }, {
         "score" : "1220",
         "username" : "admin"
       }, {
@@ -112,33 +133,12 @@
       }, {
         "score" : "1100",
         "username" : "admin"
-      }, {
-        "score" : "920",
-        "username" : "admin"
-      }, {
-        "score" : "740",
-        "username" : "admin"
-      }, {
-        "score" : "620",
-        "username" : "admin"
-      }, {
-        "score" : "440",
-        "username" : "admin"
-      }, {
-        "score" : "0",
-        "username" : "admin"
-      }, {
-        "score" : "0",
-        "username" : "admin"
-      }, {
-        "score" : "0",
-        "username" : "admin"
       } ],
       "game" : "WrapperGame"
     } ],
-    "totalScore" : "6260",
-    "timePlayed" : "0",
+    "totalScore" : "25313",
+    "timePlayed" : "216424",
     "userID" : "36d21756-18b9-4b1a-8018-2d22cf1e7aac",
     "currentStage" : "5"
-  }]
+  } ]
 }

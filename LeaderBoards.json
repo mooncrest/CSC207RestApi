@@ -1,34 +1,34 @@
 {
   "subGameLeaderBoards" : [ {
     "scores" : [ {
-      "score" : "1220",
+      "score" : "3280",
+      "username" : "admin"
+    }, {
+      "score" : "3280",
+      "username" : "admin"
+    }, {
+      "score" : "2980",
+      "username" : "admin"
+    }, {
+      "score" : "2920",
+      "username" : "admin"
+    }, {
+      "score" : "2260",
+      "username" : "admin"
+    }, {
+      "score" : "2260",
+      "username" : "admin"
+    }, {
+      "score" : "2260",
+      "username" : "admin"
+    }, {
+      "score" : "2020",
       "username" : "admin"
     }, {
       "score" : "1220",
       "username" : "admin"
     }, {
-      "score" : "1160",
-      "username" : "admin"
-    }, {
-      "score" : "1100",
-      "username" : "admin"
-    }, {
-      "score" : "1100",
-      "username" : "testing"
-    }, {
-      "score" : "920",
-      "username" : "admin"
-    }, {
-      "score" : "740",
-      "username" : "admin"
-    }, {
-      "score" : "620",
-      "username" : "admin"
-    }, {
-      "score" : "560",
-      "username" : "admin"
-    }, {
-      "score" : "440",
+      "score" : "1220",
       "username" : "admin"
     } ],
     "game" : "WrapperGame"
