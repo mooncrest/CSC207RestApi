@@ -90,6 +90,9 @@ public class TokensService {
         if (tokenUser == null) {
             return;
         }
+//        System.out.println("updateTimePlayed");
+//        System.out.println(tokenUser);
+//        System.out.println(timePlayed);
         usersService.updateTimePlayed(tokenUser, timePlayed);
     }
 }

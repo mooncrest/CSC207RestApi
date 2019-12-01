@@ -22,6 +22,10 @@ public class StageUpdaterController {
 
     @PutMapping(path = "{stage}")
     public ResponseEntity<String> login(@PathVariable("stage") String stage, @RequestBody Token token) {
+        System.out.println("stage update response");
+        System.out.println(stage);
+        System.out.println(token.getUsername());
+        System.out.println(token.getToken());
         tokensService.updateStage(token, stage);
         return new ResponseEntity<>("{Status: posted}", HttpStatus.OK);
     }

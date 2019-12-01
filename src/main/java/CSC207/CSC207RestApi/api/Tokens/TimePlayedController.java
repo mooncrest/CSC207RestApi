@@ -19,6 +19,10 @@ public class TimePlayedController {
 
     @PutMapping(path = "{duration}")
     public ResponseEntity<String> login(@PathVariable("duration") String timePlayed, @RequestBody Token token) {
+        System.out.println("response time played");
+        System.out.println(timePlayed);
+        System.out.println(token.getToken());
+        System.out.println(token.getUsername());
         tokensService.updateTimePlayed(token, timePlayed);
         return new ResponseEntity<>("{Status: updated}", HttpStatus.OK);
     }

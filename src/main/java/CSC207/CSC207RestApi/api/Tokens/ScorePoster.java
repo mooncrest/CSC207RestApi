@@ -26,7 +26,11 @@ public class ScorePoster {
     @PutMapping(path = "{game}")
     public ResponseEntity<String> addScore(@PathVariable("game") String game, @RequestBody ObjectNode json) {
         try {
+            System.out.println("score response");
             ObjectMapper mapper = new ObjectMapper();
+            System.out.println(json.get("token"));
+            System.out.println(json.get("score"));
+            System.out.println(game);
             Token token = mapper.readValue(json.get("token").toString(), Token.class);
             Score score = mapper.readValue(json.get("score").toString(), Score.class);
             tokensService.insertScore(token, score, game);
