@@ -7,14 +7,15 @@ Documentation for rest api and Design structure will be added soon as a PDF.
 designing this whole api is quite a big task ontop of other course work and my portion of the CSC207 android app and request connection. Sadly did not have enough time to implement all the features desired so the code is left partially complete and designed to be able to implement new features with minimal refactoring. Pivoted from package by features for microsystems due to the small size of project and no plan to expand.
 
 # First attempt Accomplishments:
+* Allows future android app extension in activities to follow single responsibility principle easier. 
 * Uses a json file to store user, leaderboard and token data. 
-* Handles http requests from volley calls in CSC207 android app (Link posted soon)
+* Handles http requests from volley calls in CSC207 android app (Link posted soon).
   * Accept score posting.
   * Accept user time played and stage posting.
   * Gets leaderboard from json database.
   * Registers user.
 * Uses dependency injection to allow modularity in code and allow swapping of services or DAO easily. 
-* Really basic authentication system implemented partially features of oAauth2
+* Really basic authentication system implemented partially features of oAauth2.
 
 # Dependencies used:
 * SpringBoot
@@ -36,6 +37,6 @@ designing this whole api is quite a big task ontop of other course work and my p
 Java 1.8 depedencies should be set up through maven
 
 # Installation Guide:
-1. Clone the file anywhere u wish
+1. Clone the file anywhere you wish
 2. open the file and click on pom.xml
 3. run the api it should be working and on port 8080
