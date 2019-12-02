@@ -4,7 +4,7 @@ A RestApi developed for an android game developed in CSC207
 Documentation for rest api and Design structure will be added soon as a PDF.
 
 # Current Status:
-designing this whole api is quite a big task ontop of other course work and my portion of the CSC207 android app and request connection. Sadly did not have enough time to implement all the features desired so the code is left partially complete and designed to be able to implement new features with minimal refactoring.
+designing this whole api is quite a big task ontop of other course work and my portion of the CSC207 android app and request connection. Sadly did not have enough time to implement all the features desired so the code is left partially complete and designed to be able to implement new features with minimal refactoring. Pivoted from package by features for microsystems due to the small size of project and no plan to expand.
 
 # First attempt Accomplishments:
 * Uses a json file to store user, leaderboard and token data. 
@@ -28,6 +28,7 @@ designing this whole api is quite a big task ontop of other course work and my p
 * Proper oAuth2 implementation currently does a really rough framework for oauth but should be implemented easily by changing services through dependency injection on the user serivces.
 * Proper Response code and Error handling 
   * Proper http response messages for detailed errors and many improper response code.
+  * Currently some methods return integers that should be documented and used later for proper error responses.
 * Salted and Peppered hash for passwords
 * Implement CQRS into the database
 
