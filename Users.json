@@ -179,13 +179,13 @@
       "game" : "TetrisGame"
     }, {
       "scores" : [ {
-        "score" : "0",
+        "score" : "3520",
         "username" : "admin"
       }, {
-        "score" : "0",
+        "score" : "3400",
         "username" : "admin"
       }, {
-        "score" : "0",
+        "score" : "3160",
         "username" : "admin"
       }, {
         "score" : "0",
@@ -277,8 +277,8 @@
       } ],
       "game" : "WrapperGame"
     } ],
-    "totalScore" : "42448",
-    "timePlayed" : "122",
+    "totalScore" : "52528",
+    "timePlayed" : "223",
     "userID" : "36d21756-18b9-4b1a-8018-2d22cf1e7aac",
     "currentStage" : "5"
   } ]

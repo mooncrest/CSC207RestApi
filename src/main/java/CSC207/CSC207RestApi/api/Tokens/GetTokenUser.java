@@ -2,8 +2,10 @@ package CSC207.CSC207RestApi.api.Tokens;
 
 import CSC207.CSC207RestApi.model.Token;
 import CSC207.CSC207RestApi.model.User;
+import CSC207.CSC207RestApi.service.Tokens.JsonTokensService;
 import CSC207.CSC207RestApi.service.Tokens.TokensService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +21,7 @@ public class GetTokenUser {
     private final TokensService tokensService;
 
     @Autowired
-    public GetTokenUser(TokensService tokensService) {
+    public GetTokenUser(@Qualifier("jsonTokensService") TokensService tokensService) {
         this.tokensService = tokensService;
     }
 

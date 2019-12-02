@@ -1,19 +1,20 @@
 package CSC207.CSC207RestApi.api.Leaderboard;
 
 import CSC207.CSC207RestApi.model.*;
+import CSC207.CSC207RestApi.service.Leaderboard.JsonLeaderBoardService;
 import CSC207.CSC207RestApi.service.Leaderboard.LeaderBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RequestMapping("api/leaderboard/testing")
 @RestController
 public class LeaderboardTester {
+
     private final LeaderBoardService leaderBoardService;
 
     @Autowired
-    public LeaderboardTester(LeaderBoardService leaderBoardService) {
+    public LeaderboardTester(@Qualifier("jsonLeaderService") LeaderBoardService leaderBoardService ) {
         this.leaderBoardService = leaderBoardService;
     }
 
