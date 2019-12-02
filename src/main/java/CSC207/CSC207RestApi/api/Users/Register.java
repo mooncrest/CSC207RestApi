@@ -22,6 +22,11 @@ public class Register {
         this.usersService = usersService;
     }
 
+    /**
+     * tries to register this user
+     * @param user the users information
+     * @return the status whether this user could be registered or not.
+     */
     @PostMapping
     public ResponseEntity<String> register(@RequestBody User user) {
         // add check for blank name

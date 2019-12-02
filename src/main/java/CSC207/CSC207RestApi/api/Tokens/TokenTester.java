@@ -17,8 +17,12 @@ public class TokenTester {
         this.tokensService = tokensService;
     }
 
+    /**
+     * a method for admins to delete all the user tokens mostly for testing
+     * @param user the admins user info
+     */
     @PostMapping
-    public void login(@RequestBody User user) {
+    public void deleteTokens(@RequestBody User user) {
         if (user.getUsername().equals("AdminTesting") && user.getPassword().equals("SomethingSecure")) {
             tokensService.deleteTokens();
         }

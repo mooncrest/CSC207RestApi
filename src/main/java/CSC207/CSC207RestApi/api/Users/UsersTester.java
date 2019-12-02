@@ -20,11 +20,10 @@ public class UsersTester {
         this.usersService = usersService;
     }
 
-    @PostMapping
-    public void addPerson(@RequestBody User user) {
-        usersService.addPerson(user);
-    }
-
+    /**
+     * gets all the users information should not be used by client code and should be secure
+     * @return the list of all the user information
+     */
     @GetMapping
     public List<User> getAllPerson() {
         return usersService.getAllUsers();

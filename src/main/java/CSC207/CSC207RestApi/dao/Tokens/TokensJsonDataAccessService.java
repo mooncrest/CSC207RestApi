@@ -8,6 +8,11 @@ import org.springframework.stereotype.Repository;
 @Repository("tokenDao")
 public class TokensJsonDataAccessService implements TokensDao {
     private final JsonHelper<TokenDataBase> jsonHelper = new JsonHelper<>(TokenDataBase.class, "Tokens.json");
+
+    /**
+     * adds a token to the database
+     * @param token a user authentication token
+     */
     @Override
     public void addToken(Token token) {
         TokenDataBase DB = jsonHelper.ReadJson();
@@ -15,6 +20,11 @@ public class TokensJsonDataAccessService implements TokensDao {
         jsonHelper.writeJson(DB);
     }
 
+    /**
+     *  verifys if the user token is valid by returning the username
+     * @param userToken a user authentication token
+     * @return the name of the username
+     */
     @Override
     public String getUsername(Token userToken) {
         String access = userToken.getToken();
@@ -27,6 +37,10 @@ public class TokensJsonDataAccessService implements TokensDao {
         return null;
     }
 
+    /**
+     * delete all the tokens in this database used for shutting the server down
+     * or for testing purposes
+     */
     @Override
     public void deleteTokens() {
         jsonHelper.writeJson(new TokenDataBase());

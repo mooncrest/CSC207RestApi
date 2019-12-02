@@ -25,6 +25,12 @@ public class ScorePoster {
         this.tokensService = tokensService;
     }
 
+    /**
+     * adds a score to the users personal leaderboards or the global leaderboards if its a high school
+     * @param game the name of the game
+     * @param json the json object that should contain a token and score
+     * @return string status code for the user
+     */
     @PutMapping(path = "{game}")
     public ResponseEntity<String> addScore(@PathVariable("game") String game, @RequestBody ObjectNode json) {
         try {

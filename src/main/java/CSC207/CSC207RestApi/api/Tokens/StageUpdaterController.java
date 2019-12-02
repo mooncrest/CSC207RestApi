@@ -19,6 +19,12 @@ public class StageUpdaterController {
         this.tokensService = tokensService;
     }
 
+    /**
+     * puts the user stage into the users unlocked stage
+     * @param stage the stage the user now unlocks
+     * @param token the access token for this user
+     * @return a json object response
+     */
     @PutMapping(path = "{stage}")
     public ResponseEntity<String> login(@PathVariable("stage") String stage, @RequestBody Token token) {
         System.out.println("stage update response");

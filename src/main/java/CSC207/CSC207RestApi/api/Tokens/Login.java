@@ -24,6 +24,11 @@ public class Login {
         this.tokensService = tokensService;
     }
 
+    /**
+     * logs the user in and returns an access token
+     * @param user the users login information
+     * @return an access token
+     */
     @PostMapping
     public ResponseEntity<Token> login(@RequestBody User user) {
         Token token = tokensService.login(user);

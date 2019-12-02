@@ -212,6 +212,9 @@
       "game" : "MazeGame"
     }, {
       "scores" : [ {
+        "score" : "290",
+        "username" : "admin"
+      }, {
         "score" : "28",
         "username" : "admin"
       }, {
@@ -231,9 +234,6 @@
         "username" : "admin"
       }, {
         "score" : "18",
-        "username" : "admin"
-      }, {
-        "score" : "0",
         "username" : "admin"
       }, {
         "score" : "0",
@@ -277,7 +277,7 @@
       } ],
       "game" : "WrapperGame"
     } ],
-    "totalScore" : "52528",
+    "totalScore" : "52818",
     "timePlayed" : "223",
     "userID" : "36d21756-18b9-4b1a-8018-2d22cf1e7aac",
     "currentStage" : "5"

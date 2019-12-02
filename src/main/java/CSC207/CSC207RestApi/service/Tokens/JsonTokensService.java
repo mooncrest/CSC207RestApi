@@ -25,6 +25,13 @@ public class JsonTokensService implements TokensService{
         this.tokensDao = tokensDao;
     }
 
+    /**
+     * inserts this score but first we verify the token
+     * @param token access token for a specific user
+     * @param score the score this user made
+     * @param game the name of the game
+     * @return a status code whether this was successful
+     */
     public int insertScore(Token token, Score score, String game) {
         String tokenUser = tokensDao.getUsername(token);
         String scoreUser = score.getUsername();
@@ -55,6 +62,12 @@ public class JsonTokensService implements TokensService{
         return 1;
     }
 
+    /**
+     * Should first verify if the user is valid if login is valid and there is a token grab it if not
+     * go and create a new one
+     * @param user the users login credentials
+     * @return access token for this user
+     */
     public Token login(User user) {
         Token token = jsonUsersService.login(user);
         if (token == null) {
@@ -64,10 +77,18 @@ public class JsonTokensService implements TokensService{
         return token;
     }
 
+    /**
+     * delete all the tokens saved in this database
+     */
     public void deleteTokens() {
         tokensDao.deleteTokens();
     }
 
+    /**
+     * get the user info for this specific token
+     * @param token
+     * @return
+     */
     public User getUser(Token token) {
         String tokenUser = tokensDao.getUsername(token);
         if (tokenUser == null) {
@@ -77,6 +98,11 @@ public class JsonTokensService implements TokensService{
         return jsonUsersService.getUser(tokenUser);
     }
 
+    /**
+     * update the stage this user is allowed to access
+     * @param token the authentication token for this user
+     * @param stage the stage to be updated to
+     */
     public void updateStage(Token token, String stage) {
         String tokenUser = tokensDao.getUsername(token);
         if (tokenUser == null) {
@@ -85,6 +111,11 @@ public class JsonTokensService implements TokensService{
         jsonUsersService.updateStage(tokenUser, stage);
     }
 
+    /**
+     * updates the time played for this user
+     * @param token the authentication token for this user
+     * @param timePlayed the stage to be updated to
+     */
     public void updateTimePlayed(Token token, String timePlayed) {
         String tokenUser = tokensDao.getUsername(token);
         if (tokenUser == null) {

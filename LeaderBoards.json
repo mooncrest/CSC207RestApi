@@ -100,6 +100,9 @@
     "game" : "MazeGame"
   }, {
     "scores" : [ {
+      "score" : "290",
+      "username" : "admin"
+    }, {
       "score" : "28",
       "username" : "admin"
     }, {
@@ -120,9 +123,6 @@
     }, {
       "score" : "18",
       "username" : "admin"
-    }, {
-      "score" : "0",
-      "username" : "none"
     }, {
       "score" : "0",
       "username" : "none"

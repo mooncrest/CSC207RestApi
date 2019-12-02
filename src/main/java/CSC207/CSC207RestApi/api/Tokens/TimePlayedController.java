@@ -19,6 +19,12 @@ public class TimePlayedController {
         this.tokensService = tokensService;
     }
 
+    /**
+     * updates this users time played
+     * @param timePlayed the new time played by this user
+     * @param token this users access token
+     * @return a json object status code
+     */
     @PutMapping(path = "{duration}")
     public ResponseEntity<String> login(@PathVariable("duration") String timePlayed, @RequestBody Token token) {
         System.out.println("response time played");

@@ -25,6 +25,11 @@ public class GetTokenUser {
         this.tokensService = tokensService;
     }
 
+    /**
+     * gets the user associated with this access token
+     * @param token the access token
+     * @return the user for this token
+     */
     @PostMapping
     public ResponseEntity<User> getUser(@RequestBody Token token) {
         User user = tokensService.getUser(token);
