@@ -42,25 +42,25 @@ Java 1.8 depedencies should be set up through maven
 3. run the api it should be working and on port 8080
 
 # Rough Documentation URL = localhost:8080 
-<Post> api/leaderboard/testing/{game}
-gets the game with name {game}
-<Get> api/leaderboard/testing
-gets all the leaderboards
-<Post> api/leaderboard/testing
-posts a specific leaderboard. Body Structure docs will be added soon.
-<Post> api/tokens/user
-gets the user of this token if its valid. Body Structure docs will be added soon.
-<Post> api/tokens/login 
-returns an auth token if valid. Body Structure docs will be added soon.
-<Post> api/tokens/score/{game}
-posts the score created by the user. Body Structure docs will be added soon.
-<Put> api/tokens/stage/{stage}
-puts the stage completed into the user data. Body Structure docs will be added soon.
-<Put> api/tokens/timeplayed/{duration}
-puts this users time played into the user data. Body Structure docs will be added soon.
-<Post> api/tokens/testing 
-deletes all the tokens in the DB. Body Structure docs will be added soon.
-<Post> api/users/register 
-Tries to add this user to the database. Body Structure docs will be added soon.
-<Get> api/users/testing
-gets all the users in this database.
+<Post> api/leaderboard/testing/{game}  
+gets the game with name {game}  
+<Get> api/leaderboard/testing  
+gets all the leaderboards   
+<Post> api/leaderboard/testing  
+posts a specific leaderboard. Body Structure docs will be added soon.  
+<Post> api/tokens/user  
+gets the user of this token if its valid. Body Structure docs will be added soon.  
+<Post> api/tokens/login   
+returns an auth token if valid. Body Structure docs will be added soon.  
+<Post> api/tokens/score/{game}  
+posts the score created by the user. Body Structure docs will be added soon.  
+<Put> api/tokens/stage/{stage}  
+puts the stage completed into the user data. Body Structure docs will be added soon.  
+<Put> api/tokens/timeplayed/{duration}  
+puts this users time played into the user data. Body Structure docs will be added soon.  
+<Post> api/tokens/testing   
+deletes all the tokens in the DB. Body Structure docs will be added soon.  
+<Post> api/users/register   
+Tries to add this user to the database. Body Structure docs will be added soon.  
+<Get> api/users/testing  
+gets all the users in this database.  
