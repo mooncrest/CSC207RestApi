@@ -1,7 +1,7 @@
 # CSC207RestApi
 A RestApi developed for an android game developed in CSC207
 
-Documentation for rest api and Design structure will be added soon as a PDF.
+Design structure will be added soon as a PDF.
 
 # Current Status:
 designing this whole api is quite a big task ontop of other course work and my portion of the CSC207 android app and request connection. Sadly did not have enough time to implement all the features desired so the code is left partially complete and designed to be able to implement new features with minimal refactoring. Pivoted from package by features for microsystems due to the small size of project and no plan to expand.
@@ -40,3 +40,27 @@ Java 1.8 depedencies should be set up through maven
 1. Clone the file anywhere you wish
 2. open the file and click on pom.xml
 3. run the api it should be working and on port 8080
+
+# Rough Documentation URL = localhost:8080 
+<Post> api/leaderboard/testing/{game}
+gets the game with name {game}
+<Get> api/leaderboard/testing
+gets all the leaderboards
+<Post> api/leaderboard/testing
+posts a specific leaderboard. Body Structure docs will be added soon.
+<Post> api/tokens/user
+gets the user of this token if its valid. Body Structure docs will be added soon.
+<Post> api/tokens/login 
+returns an auth token if valid. Body Structure docs will be added soon.
+<Post> api/tokens/score/{game}
+posts the score created by the user. Body Structure docs will be added soon.
+<Put> api/tokens/stage/{stage}
+puts the stage completed into the user data. Body Structure docs will be added soon.
+<Put> api/tokens/timeplayed/{duration}
+puts this users time played into the user data. Body Structure docs will be added soon.
+<Post> api/tokens/testing 
+deletes all the tokens in the DB. Body Structure docs will be added soon.
+<Post> api/users/register 
+Tries to add this user to the database. Body Structure docs will be added soon.
+<Get> api/users/testing
+gets all the users in this database.
