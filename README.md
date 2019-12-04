@@ -1,8 +1,6 @@
 # CSC207RestApi
 A RestApi developed for an android game developed in CSC207
 
-![REST API block diagram](Block_Diagram.png)
-
 # Current Status:
 designing this whole api is quite a big task ontop of other course work and my portion of the CSC207 android app and request connection. Sadly did not have enough time to implement all the features desired so the code is left partially complete and designed to be able to implement new features with minimal refactoring. Pivoted from package by features for microsystems due to the small size of project and no plan to expand.
 
@@ -64,3 +62,6 @@ deletes all the tokens in the DB. Body Structure docs will be added soon.
 Tries to add this user to the database. Body Structure docs will be added soon.  
 <Get> api/users/testing  
 gets all the users in this database.  
+
+# Design Model
+![REST API block diagram](Block_Diagram.png)
